@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
+    <script src=https://code.jquery.com/jquery-3.4.1.js></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
@@ -91,7 +92,75 @@
         }
     </style>
 </head>
-<body>
+<body> 
+    <div class="cursor"></div>
+
+   
+
+    <div class="alert">
+
+      <img class="circle-exclamation" src="circle-exclamation-solid.png"/>
+
+      <span class="msg">Message sent successfully!</span>
+
+      <span class="close-btn">
+
+        <img class="xmark" src="xmark-solid.png"/>
+
+      </span>
+
+    </div>
+       <div class="content">
+
+     
+
+        <form id="contactForm" class="contact-form" action=YOUR FORMSPREE LINK HERE method="POST">
+
+         
+
+          <div class="form-group">
+
+            <label for="name">Name:</label>
+
+            <input type="text" id="name" name="name" required>
+
+          </div>
+
+         
+
+          <div class="form-group">
+
+            <label for="email">Email:</label>
+
+            <input type="email" id="email" name="email" required>
+
+          </div>
+
+         
+
+          <div class="form-group">
+
+            <label for="message">Message:</label>
+
+            <textarea id="message" name="message" required></textarea>
+
+          </div>
+
+         
+
+          <div class="form-group">
+
+            <button type="submit">Send Message <img src="arrow_icon.png" /></button>
+
+          </div>
+
+        </form>
+
+       
+
+      </div>
+
+
     <nav>
         <div>Contact Me</div>
         <div>
@@ -154,6 +223,9 @@
                 );
         });
     </script>
+    <script src="Contact.js"></script>
+
+
 </body>
 </html>
 
