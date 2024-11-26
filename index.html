@@ -91,18 +91,20 @@
         }
 
         .alert {
-          background: rgb(44, 39, 161);
-          padding: 10px 40px;
-          min-width: 320px;
-          position: absolute;
-          right: 10px;
-          top: 10px;
-          overflow: hidden;
-          border-radius: 6px;
-          border-left: 8px solid #c603fc;
-          opacity: 0;
-          pointer-events: none;
-        }
+    background-color: #4a145e; /* Matches the container background */
+    color: #ffd6ff; /* Matches the heading and theme */
+    padding: 10px 40px;
+    min-width: 320px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    overflow: hidden;
+    border-radius: 6px;
+    border-left: 8px solid #d9a1ff; /* Matches the border theme */
+    opacity: 0;
+    pointer-events: none;
+    font-family: "Times New Roman", Times, serif;
+}
 
         .alert.showAlert { opacity: 1; pointer-events: auto; }
         
@@ -134,15 +136,41 @@
 
 }
 
-.alert .circle-exclamation { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); width: 20px; }
+        .alert .circle-exclamation {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    filter: invert(88%) sepia(15%) saturate(750%) hue-rotate(289deg) brightness(97%) contrast(100%);
+    /* Adjust icon color to fit the theme */
+}
 
-.alert .msg { padding: 0 20px; font-size: 18px; /* color: #ce8500; */ }
-
-.alert .close-btn { position: absolute; right: 0px; top: 50%; transform: translateY(-50%); background: rgb(44, 39, 161); padding: 20px 18px; border-radius: 0 6px 6px 0; }
-
-.close-btn:hover { background: #a1daf9; }
-
-.close-btn .xmark { line-height: 40px; width: 10px; }
+.alert .msg {
+    padding: 0 20px;
+    font-size: 18px;
+    color: #e6e6fa; /* Matches text color in the theme */
+}
+.alert .close-btn {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #3c0a4d; /* Matches button background */
+    padding: 20px 18px;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.close-btn:hover {
+    background-color: #ffd6ff; /* Matches button hover color */
+    color: #1a001f; /* Matches button hover text */
+}
+.close-btn .xmark {
+    width: 10px;
+    filter: invert(88%) sepia(15%) saturate(750%) hue-rotate(289deg) brightness(97%) contrast(100%);
+    /* Adjust icon color to fit the theme */
+} 
     </style>
 </head>
 <body> 
