@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <style>
         body {
             font-family: "Times New Roman", Times, serif;
@@ -93,73 +92,14 @@
     </style>
 </head>
 <body> 
-    <div class="cursor"></div>
-
-   
 
     <div class="alert">
-
       <img class="circle-exclamation" src="circle-exclamation-solid.png"/>
-
       <span class="msg">Message sent successfully!</span>
-
       <span class="close-btn">
-
         <img class="xmark" src="xmark-solid.png"/>
-
       </span>
-
     </div>
-       <div class="content">
-
-     
-
-        <form id="contactForm" class="contact-form" action=https://formspree.io/f/xbljavqp method="POST">
-
-         
-
-          <div class="form-group">
-
-            <label for="name">Name:</label>
-
-            <input type="text" id="name" name="name" required>
-
-          </div>
-
-         
-
-          <div class="form-group">
-
-            <label for="email">Email:</label>
-
-            <input type="email" id="email" name="email" required>
-
-          </div>
-
-         
-
-          <div class="form-group">
-
-            <label for="message">Message:</label>
-
-            <textarea id="message" name="message" required></textarea>
-
-          </div>
-
-         
-
-          <div class="form-group">
-
-            <button type="submit">Send Message <img src="arrow_icon.png" /></button>
-
-          </div>
-
-        </form>
-
-       
-
-      </div>
-
 
     <nav>
         <div>Contact Me</div>
@@ -187,45 +127,11 @@
 
             <button type="submit">Send Message</button>
         </form>
-        <div id="responseMessage" class="message"></div>
     </div>
     <footer>
         <p>&copy; 2024 Shafwan Hossain. All Rights Reserved.</p>
     </footer>
-    <script>
-        // Initialize EmailJS
-        emailjs.init("YOUR_EMAILJS_USER_ID"); // Replace with your EmailJS User ID
-
-        // Handle form submission
-        document.getElementById("contactForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission behavior
-
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-
-            const templateParams = {
-                name: name,
-                email: email,
-                message: message,
-            };
-
-            emailjs
-                .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams) // Replace with your Service ID and Template ID
-                .then(
-                    function(response) {
-                        document.getElementById("responseMessage").textContent = "Thank you! Your message has been sent successfully.";
-                    },
-                    function(error) {
-                        console.error("Failed to send message:", error);
-                        document.getElementById("responseMessage").textContent = "Oops! Something went wrong. Please try again.";
-                    }
-                );
-        });
-    </script>
     <script src="Contact.js"></script>
-
-
 </body>
 </html>
 
